@@ -1,11 +1,24 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import "react-native-gesture-handler";
+import Contact from './components/Contact';
+import Maping from './components/Map';
+import Picture from './components/Picture';
+import Menu from './components/Menu';
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Menu" component={Menu} />
+        <Stack.Screen name="Contact" component={Contact} />
+        <Stack.Screen name="Maping" component={Maping} />
+        <Stack.Screen name="Picture" component={Picture} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
