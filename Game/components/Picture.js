@@ -1,7 +1,5 @@
 import React from 'react';
 import { StyleSheet, Text, View, CameraRoll, ScrollView } from "react-native";
-import * as MediaLibrary from "expo-media-library";
-import { Constants } from "expo";
 
 
 export default class Picture extends React.Component {
@@ -13,9 +11,8 @@ export default class Picture extends React.Component {
     }
     
     render() {
-        let { photos } = this.state;
         return (
-          <View>
+          <View style={styles.container}>
             <Text>hello picture</Text>
           </View>
         );
